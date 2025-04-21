@@ -11,12 +11,6 @@ app = FastAPI()
 # Path where model will be saved
 model_path = "best.pt"
 
-# Download best.pt from Google Drive if not already downloaded
-if not os.path.exists(model_path):
-    print("Downloading model...")
-    url = "https://drive.google.com/uc?export=download&id=1Fq8sQYDGxyydaFNL5E1_FPx8_Vsjt5T-"
-    urllib.request.urlretrieve(url, model_path)
-
 # Load the model
 model = torch.hub.load('ultralytics/yolov5', 'custom', path=model_path, force_reload=True)
 
