@@ -4,3 +4,4 @@ torch
 Pillow
 python-multipart
 opencv-python-headless
+pandas
